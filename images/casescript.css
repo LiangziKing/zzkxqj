@@ -1,0 +1,77 @@
+﻿/*案例滚动*/
+	#tFocus-btn li.active,#tFocus-leftbtn,#tFocus-rightbtn{display:block;}
+	#tFocus{  width: 860px;background:#fff;overflow:hidden;}
+	#tFocus .active{width:133px;}
+	#tFocus-pic{width:820px;height:500px;position:relative;z-index:0;}
+	#tFocus-pic li{width:100%; text-align: center; height:100%;position:absolute;left:0;top:0;filter:alpha(opacity:0);opacity:0;}
+	#tFocus-pic li img{ }
+	#tFocusBtn{margin-top:10px;z-index:20;overflow:hidden; background:#fff;width:860px;}
+	#tFocus-btn{width:740px;height:110px;position:relative;left:0;bottom:0;overflow:hidden;float:left;margin-right:3px;}
+	#tFocus-btn ul{width:100000px;position:absolute;left:0;top:0;margin-left:-40px;}
+	#tFocus-btn li{padding-top:3px;display:block;float:left;margin-right:5px;}
+	#tFocus-btn li img{border:2px solid #dddddd}
+	#tFocus-btn li.active{background-position:-448px -100px;}
+	#tFocus-btn li.active img{border:2px solid #40b9e5}
+	#tFocus-leftbtn,#tFocus-rightbtn{height:40px;margin-top:35px;width:15px;float:left;text-indent:-9999px;margin-left:15px; margin-right:15px;}
+	#tFocus-leftbtn{DISPLAY: block;
+	  BACKGROUND: url(/images/al_xq_left.png) no-repeat center;
+	  MARGIN: 0px;
+	  OVERFLOW: hidden;
+	  WIDTH: 45px;
+	  TEXT-INDENT: -9999em;
+	  HEIGHT: 30px;
+	  outline: none;
+	  float: left;
+	  margin-top: 40px;
+	  margin-left: 13px;
+	  }
+	#tFocus-rightbtn{
+	  DISPLAY: block;
+	  BACKGROUND: url(/images/al_xq_right.png) no-repeat center;
+	  MARGIN: 0px;
+	  OVERFLOW: hidden;
+	  WIDTH: 45px;
+	  TEXT-INDENT: -9999em;
+	  HEIGHT: 30px;
+	  outline: none;
+	  float: left;
+	  margin-top: 40px;
+	}
+	.smallpicarea_left, .smallpicarea_right {
+	  width: 131px;
+	  margin-top: 3px;
+	  text-align: center;
+	  color: #666666;
+	}
+	.smallpicarea_left {
+	  float: left;
+	}
+	.smallpicarea_right {
+	  float: right;
+	}
+
+	#tFocus .next,#tFocus .prev{
+	  display: block;
+	  position: absolute;
+	  z-index: 1;
+	  top: 226px;
+	  margin-top: -30px;
+	  left: 5%;
+	  z-index:999;
+	  width: 40px;
+	  height: 60px;
+	  background: url(/images/slider-arrow.png) -126px -137px #000 no-repeat;
+	  cursor: pointer;
+	  filter: alpha(opacity=50);
+	  opacity: 0.5;
+	 
+	}
+	#tFocus .prev{
+	  
+	}
+	#tFocus .next{
+		left: auto;
+	  right: 5%;
+	  background-position: -6px -137px;
+	}
+	/*案例滚动结束*/

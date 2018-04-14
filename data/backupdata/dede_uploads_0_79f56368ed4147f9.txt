@@ -1,0 +1,11 @@
+INSERT INTO `dede_uploads` VALUES('1','1','对付夏季厨房污渍有妙招','/uploads/allimg/180414/1356352108-0.png','1','300','203','0','73431','1523685395','1');
+INSERT INTO `dede_uploads` VALUES('2','1','对付夏季厨房污渍有妙招','/uploads/allimg/180414/1359593327-0.png','1','300','203','0','73431','1523685599','1');
+INSERT INTO `dede_uploads` VALUES('3','1','对付夏季厨房污渍有妙招','/uploads/allimg/1804/14101620Q-0.png','1','300','203','0','73431','1523686216','1');
+INSERT INTO `dede_uploads` VALUES('4','2','新房摆放什么植物','/uploads/allimg/1804/1-1P414142041B6.jpg','1','500','332','0','28208','1523686841','1');
+INSERT INTO `dede_uploads` VALUES('5','2','新房摆放什么植物','/uploads/allimg/1804/1-1P41414211H11.jpg','1','292','344','0','11454','1523686877','1');
+INSERT INTO `dede_uploads` VALUES('6','3','选择厨房台面，让卫生不在难处理','/uploads/allimg/1804/1426313321-0.png','1','300','225','0','122145','1523687191','1');
+INSERT INTO `dede_uploads` VALUES('7','4','生活服务类APP纠纷不少 预订家政保洁成投诉热点','/uploads/allimg/1804/143UAY5-0.jpg','1','1110','616','0','41887','1523687936','1');
+INSERT INTO `dede_uploads` VALUES('8','11','张明燕','/uploads/allimg/1804/153T92235-0.jpg','1','1000','667','0','60648','1523691529','1');
+INSERT INTO `dede_uploads` VALUES('9','12','林冰婷','/uploads/allimg/1804/154429D58-0.jpg','1','412','305','0','121508','1523691869','1');
+INSERT INTO `dede_uploads` VALUES('10','13','刘菲菲','/uploads/allimg/1804/1545411219-0.jpg','1','428','305','0','99942','1523691941','1');
+INSERT INTO `dede_uploads` VALUES('11','0','1-1P414164448.png','/uploads/allimg/1804/1-1P414164448.png','0','0','0','0','18347','1523695488','1');

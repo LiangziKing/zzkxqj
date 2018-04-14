@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html><head lang="zh-CN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}">    
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+	<link rel="stylesheet" href="/images/animate.min.css">
+<link rel="stylesheet" href="/images/normalize.css">
+<link rel="stylesheet" href="/images/index.css">
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="http://cdn.bootcss.com/placeholders/4.0.1/placeholders.min.js"></script>
+<![endif]-->
+
+
+<link rel="stylesheet" href="/images/layer.css" id="layui_layer_skinlayercss">
+
+<script type="text/javascript" language="javascript">
+//验证码 
+function changeAuthCode() { 
+    var num =     new Date().getTime();
+    var rand = Math.round(Math.random() * 10000);
+    num = num + rand;
+    $('#ver_code').css('visibility','visible');
+    if ($("#vdimgck")[0]) {
+        $("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
+    }
+    return false;    
+}
+</script>
+
+</head>
+<body>
+
+{dede:include filename="head.htm"/}
+
+<style>
+	.designer-list ul{margin-right:-10px;}
+	.designer-list li{float:left; width:288px; margin:0 10px 60px 0; border:1px solid #ccc;}
+		.designer-list li .pic{display:block;overflow: hidden;height:201px}
+			.designer-list li .pic img{display:block; width:100%;-webkit-transition:all .4s; -moz-transition:all .4s; -ms-transition:all .4s; -o-transition:all .4s; transition:all .4s; -webkit-transform:scale(1);-moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1); transform:scale(1);overflow: hidden;}
+			.designer-list li a:hover .pic img{
+					-webkit-transform: scale(1.4);
+					-moz-transform: scale(1.4);
+					-ms-transform: scale(1.4);
+					-o-transform: scale(1.4);
+					transform: scale(1.4);}
+		.designer-list li .desc{padding:8px 16px 15px; border-top:1px solid #ccc;}
+			.designer-list li .desc h3{height:40px; line-height:40px; overflow:hidden; margin:0; font-size:20px; font-weight:normal;}
+				.designer-list li .desc h3 a{text-decoration:none;}
+				.designer-list li .desc h3 span{margin-left:8px; font-size:13px; color:#818181;}
+			.designer-list li .desc .btn{display:block; width:70px; height:26px; line-height:26px; overflow:hidden; font-size:13px; color:#fff; text-align:center; text-decoration:none; background-color:#E63C49;}
+			.designer-list li .desc p{overflow:hidden; margin:0 0; font-size:13px;width:170px;height:26px;line-height:26px;text-overflow:ellipsis;}
+			.case{background: #292a2e;}
+			.case .title{color:#FFF}
+			.video_div {position: fixed;background: #ccc;width: 480px;top: 50%;margin-top: -262px;}
+			.video_div p{float: right;padding-right: 10px;}
+			.video_div span{height: 40px;line-height: 40px;padding: 0px 30px;font-size: 20px;}
+			.video_div1{position: fixed;width: 20px;bottom: 0px;background: #ccc;color: #000;font-size: 20px;padding: 10px;top: 50%;height: 110px;}
+	</style>
+<div class="banner">
+	<div class="banner-slider">
+		
+	<ul class="slides list clearfix">
+	{dede:arclist orderby='id' typeid='37' row=5 }
+						<li><a href="[field:arcurl/]"><img src="[field:litpic/]" style="width:1920px;height:560px;max-width:1920px"></a></li>
+							{/dede:arclist}
+					</ul>
+	
+	</div>
+
+
+
+
+
+
+
+
+	<div style="position:absolute;top:50px;right:8%">
+			<form action="/plus/diy.php" enctype="multipart/form-data"  method="post">
+			<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="2" />
+<input type="hidden" name="do" value="2" />
+
+				<div class="offer pull-right ">
+				<header class="offer-title">
+										<h3>快速报价</h3>
+					<p>填写信息 即刻获取</p>
+									</header>
+				<div class="form">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入您的姓名" name="contact" title="请输入您的姓名">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入您的房屋面积" name="area" title="请输入您的房屋面积">
+						<ins>平米</ins>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入楼盘地址" name="addr" title="请输入楼盘地址">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入您的手机号码" name="phone" title="请输入您的手机号码">
+					</div>
+					<div class="form-list clearfix">
+						<div class="form-group col-6">
+						
+						<input name="validate" class="form-control" placeholder="输入验证码" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/>
+						
+						
+						
+						</div>
+						<div class="form-group col-6" style="height:31px;line-height:27px;">
+						
+<img  style="margin-left:10px;" id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="../include/vdimgck.php" />
+						
+							
+						</div>
+					</div>
+					
+					
+					<input name="tijiaoshijian" value="" type="hidden"  id="tijiaoshijian"  />
+
+      <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)
+
++"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()
+
++":"+nowDate.getSeconds();
+
+                    document.getElementById("tijiaoshijian").value=str;
+
+                    }
+
+                    </script><input type="hidden" name="dede_fields" value="contact,text;sex,radio;phone,text;addr,text;area,text;cost,text;unit,text;dstyle,text;shejishi,text;content,multitext;dtime,text;tijiaoshijian,text" />
+<input type="hidden" name="dede_fieldshash" value="3571ac5a9270c7a7a15f2c0cda47dce2" />
+					
+					
+					
+					<div class="form-group">
+					
+						<input type="submit" class="btn btn-submit" value="确定提交">
+					</div>
+				</div>
+			</div></form>	</div>
+</div>
+<div class="search">
+	<div class="container clearfix">
+		<div class="search-title pull-left"><span>CASE SEARCH</span>大家都在搜：
+							{dede:hotwords num='9'/}
+					</div>
+		<form action="{dede:global.cfg_cmsurl/}/plus/search.php" method="get">
+		<div class="search-box pull-right">
+			<div class="select pull-left">
+				<span>案例</span>
+				
+			</div>
+			<input type="hidden" name="m" value="case">
+			<input type="text" class="txt pull-left" placeholder="请输入关键字" name="q">
+			<button type="submit" class="btn pull-left">搜索</button>
+		</div>
+		</form>
+	</div>
+</div>
+<div class="box">
+	<div class="container">
+		<header class="title">
+			<h3>精装系列</h3>
+			<p>HARDCOVER SERIES</p>
+		</header>
+		<div class="clearfix">
+			<img src="/images/img02.jpg" class="pull-left" draggable="false">
+			<div class="hardcover-slider pull-right">
+				<div class="pic pull-left">
+				         	                <a href="{dede:type typeid='93'}[field:typeurl/]{/dede:type}"><img src="/images/1484796781280007.jpg" draggable="false"></a>
+											<a href="{dede:type typeid='89'}[field:typeurl/]{/dede:type}"><img src="/images/1484649562892608.jpg" draggable="false"></a>
+											<a href="{dede:type typeid='90'}[field:typeurl/]{/dede:type}"><img src="/images/1484649656605672.jpg" draggable="false"></a>
+											<a href="{dede:type typeid='91'}[field:typeurl/]{/dede:type}"><img src="/images/1484031534283192.jpg" draggable="false"></a>
+										
+									</div>
+				<ul class="pull-right list">
+				                        {dede:type typeid='93'}<li class="h0  active">[field:typename/]</li>{/dede:type}
+										{dede:type typeid='89'}<li class="h1">[field:typename/]</li>{/dede:type}
+										{dede:type typeid='90'}<li class="h2 ">[field:typename/]</li>{/dede:type}
+										{dede:type typeid='91'}<li class="h3 ">[field:typename/]</li>{/dede:type}
+										
+									</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="case box">
+	<div class="container">
+		<header class="title">
+			<h3><a href="{dede:type typeid='7'}[field:typeurl/]{/dede:type}">案例中心</a></h3>
+			<p>CASE CENTER</p>
+		</header>
+		<div class="tabnav tab-btn" id="tabNav0">
+		
+		
+		
+							<a href="javascript:void(0);" class="btn active" style="color:#FFF">最新案例</a>
+							
+							
+							<a href="javascript:void(0);" class="btn" style="color:#FFF">推荐案例</a>
+							
+							<a href="javascript:void(0);" class="btn" style="color:#FFF">热门案例</a>
+							
+							
+					</div>
+					
+				
+					
+		<div class="tabcont" id="tabCont0">
+						<div class="site-list" style="display: block;">
+				<ul class="list clearfix">
+															
+															
+						{dede:arclist orderby='id' typeid='30' row=4  titlelen='30' }									
+															
+															<li>
+						<a href="[field:arcurl/]">
+							<div class="pic"><img src="[field:litpic/]"></div>
+							<div class="desc">
+								<h3>[field:title/]</h3>
+								<p></p>
+							</div>
+						</a>
+					</li>
+								{/dede:arclist}												
+			</ul>
+			</div>
+						<div class="site-list" style="display: none;">
+				<ul class="list clearfix">
+														
+														{dede:arclist flag='c' orderby='id' typeid='30' row=4  titlelen='30' }									
+															
+															<li>
+						<a href="[field:arcurl/]">
+							<div class="pic"><img src="[field:litpic/]"></div>
+							<div class="desc">
+								<h3>[field:title/]</h3>
+								<p></p>
+							</div>
+						</a>
+					</li>
+								{/dede:arclist}				
+														
+														
+														</ul>
+			</div>
+						<div class="site-list" style="display: none;">
+				<ul class="list clearfix">
+														
+														{dede:arclist orderby='hot' typeid='30' row=4  titlelen='30' }									
+															
+															<li>
+						<a href="[field:arcurl/]">
+							<div class="pic"><img src="[field:litpic/]"></div>
+							<div class="desc">
+								<h3>[field:title/]</h3>
+								<p></p>
+							</div>
+						</a>
+					</li>
+								{/dede:arclist}				
+														
+																								</ul>
+			</div>
+						<div class="site-list" style="display: none;">
+				<ul class="list clearfix">
+															{dede:arclist orderby='id' typeid='30' row=4  titlelen='30' }									
+															
+															<li>
+						<a href="[field:arcurl/]">
+							<div class="pic"><img src="[field:litpic/]"></div>
+							<div class="desc">
+								<h3>[field:title/]</h3>
+								<p></p>
+							</div>
+						</a>
+					</li>
+								{/dede:arclist}				
+																								</ul>
+			</div>
+					
+					</div>
+	</div>
+</div>
+<!--<div class="box01"></div>
+<div class="box02"></div>-->
+<div class="info">
+	<div class="container clearfix">
+		<div class="pic pull-left wow slideInLeft" style="visibility: visible; animation-name: slideInLeft;">
+			<img src="/images/index01.jpg" class="">
+		</div>
+		<h3 class="wow slideInRight" style="visibility: visible; animation-name: slideInRight;">FKMOBAN</h3>
+		<h4 class="wow slideInRight" style="visibility: visible; animation-name: slideInRight;">ONLY THE MAIN LINE USING IMPORTED MATERIALS,<br>TOXIC REFUSE DECORATION</h4>
+		<h5 class="wow slideInRight" style="visibility: visible; animation-name: slideInRight;">环保，我们从来都很严格</h5>
+		<h6 class="wow slideInRight" style="visibility: visible; animation-name: slideInRight;"><span>{dede:global.cfg_name/}</span> - 采用一线品牌主材，拒绝有毒保洁 </h6>
+		<ul class="clearfix wow slideInRight" style="visibility: visible; animation-name: slideInRight;">
+			<li class="green"><p>环 保</p>高标准</li>
+			<li class="coffee"><p>品 质</p>高品质</li>
+			<li class="blue"><p>格 调</p>高格调</li>
+		</ul>
+	</div>
+</div>
+<div class="advantage">
+	<a href="{dede:type typeid='28'}[field:typeurl/]{/dede:type}" style="color:#000"><img src="/images/index02.png" class="pic"></a>
+	<ul class="list active">
+		<li class="a0"><p>按套收费报价清晰</p></li>
+		<li class="a1"><p>国际主材环保安心</p></li>
+		<li class="a2"><p>名师设计理想家居</p></li>
+		<li class="a3"><p>自有施工随时监控</p></li>
+		<li class="a4"><p>预算清晰拒绝增项</p></li>
+		<li class="a5"><p>品质保证安住无忧</p></li>
+	</ul>
+	<a href="{dede:type typeid='31'}[field:typeurl/]{/dede:type}" class="btn"></a>
+</div>
+<div class="team box">
+	<div class="container">
+		<header class="title">
+			<h3><a href="{dede:type typeid='28'}[field:typeurl/]{/dede:type}" style="color:#000">保洁团队</a></h3>
+			<p>CLEANING TEAM</p>
+		</header>
+		<div class="designer-list">
+			<ul class="list clearfix">
+			
+			
+			{dede:arclist  orderby='id' typeid='28' row=8 titlelen='40' addfields='zhiwen,jianjie' channelid='7'}
+									<li>
+						<a href="[field:arcurl/]">	<div class="pic"><img src="[field:litpic/]"></div></a>
+						<div class="desc clearfix">
+							<h3><a href="[field:arcurl/]">[field:title/]</a><span>[field:zhiwen/]</span></h3>
+							<a href="http://wpa.qq.com/msgrd?v=3&uin=[field:global.cfg_qq/]&site=qq&menu=yes" class="btn pull-right">在线咨询</a>
+							<p>[field:jianjie/]</p>
+						</div>
+					</li>
+							{/dede:arclist}		
+								
+			</ul>
+		</div>
+		<!---</div>-->
+	</div>
+</div>
+<div class="site box">
+	<div class="container">
+		<header class="title white-title">
+			<h3><a href="{dede:type typeid='75'}[field:typeurl/]{/dede:type}">在建工地</a></h3>
+			<p>CONSTRUCTION SITE</p>
+		</header>
+		<div class="site-list site-list3">
+			<ul class="list clearfix">
+			
+			
+			{dede:arclist orderby='id' typeid='75' row=6  titlelen='20' addfields='jingcheng,yezhu,fengge' channelid='18'}
+			
+								<li class="show">
+					<a href="[field:arcurl/]">
+							<div class="pic"><img src="[field:litpic/]"></div>
+						<div class="desc">
+							<h3>当前阶段：[field:jingcheng/]</h3>
+							<p>[field:title/] - [field:yezhu/] - [field:fengge/]</p>
+						</div>
+					</a>
+				</li>{/dede:arclist}
+								
+							</ul>
+		</div>
+	</div>
+</div>
+<div class="progress box">
+	<div class="container">
+		<header class="title">
+			<h3>保洁流程</h3>
+			<p>RENOVATION PROCESS</p>
+		</header>
+		<div class="progress-list">
+			<ul class="list clearfix">
+				<li class="p0">
+					<div class="pic"><img src="/images/progress01.png" draggable="false"></div>
+					<h3>在线沟通/了解需求</h3>
+					<p>ONLINE CHATING</p>
+				</li>
+				<li class="p1">
+					<div class="pic"><img src="/images/progress02.png" draggable="false"></div>
+					<h3>现场勘测/配置方案</h3>
+					<p>MEASURING</p>
+				</li>
+				<li class="p2">
+					<div class="pic"><img src="/images/progress03.png" draggable="false"></div>
+					<h3>合同签订/配送物料</h3>
+					<p>SIGNING THE CONTRACT</p>
+				</li>
+				<li class="p3">
+					<div class="pic"><img src="/images/progress04.png" draggable="false"></div>
+					<h3>人员到岗/开工大吉</h3>
+					<p>CHOOSE MATERIAL</p>
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<h3>咨询热线</h3>
+			<a href="javascript:;">{dede:global.cfg_tel/}</a>
+		</footer>
+	</div>
+</div>
+<div class="about box">
+	<div class="container clearfix">
+		<ul class="list clearfix">
+			<li><img src="/images/about01.png"></li>
+			<li><img src="/images/about02.png"></li>
+			<li><img src="/images/about03.png"></li>
+			<li><img src="/images/about04.png"></li>
+		</ul>
+		<div class="pic pull-left"><img src="/images/img07.jpg" draggable="false"></div>
+		<div class="desc">
+			<h3>{dede:type typeid='31'}[field:typename/]{/dede:type}</h3>
+			<h4>ABOUT US</h4>
+			<p>	{dede:sql sql="select content from dede_arctype where id=31"}
+[field:content function=cn_substr(Html2Text(@me),480)/]
+{/dede:sql}...</p>
+			<a href="{dede:type typeid='31'}[field:typeurl/]{/dede:type}" class="btn"></a>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<div class="container">
+		<header class="title">
+			<h3>{dede:type typeid='27'}<a href="[field:typeurl/]" style="color:#000">[field:typename/]</a>{/dede:type}</h3>
+			<p>company dynamic</p>
+		</header>
+		<div class="mark-list">
+			<ul class="list clearfix">
+							
+							
+							{dede:arclist  orderby='id' typeid='27' row=4  titlelen='60'}
+							<li>
+					<a href="[field:arcurl/]">
+					<div class="pic"><img src="[field:litpic/]"></div></a>
+					<h3><a href="[field:arcurl/]" title="[field:fulltitle/]">[field:title/]</a></h3>
+					<time>[field:pubdate function="GetDateMK(@me)"/]</time>
+				</li>
+						{/dede:arclist}
+						</ul>
+		</div>
+	</div>
+</div>
+
+{dede:include filename="footer.htm"/}
+
+<script src="/images/wow.min.js"></script>
+<script>
+	new WOW().init();
+	$(function(){
+		$(".banner-slider").flexslider({namespace:"banner-",animation:"slide",directionNav:false});
+		$(".hardcover-slider li").hover(function(){
+			var index = $(this).index();
+			$(this).addClass("active").siblings("li").removeClass("active");
+			$(".hardcover-slider .pic a").eq(index).fadeIn(200).siblings().hide();
+		});
+		$(".team-slider").flexslider({namespace:"team-",controlNav:false,prevText:"<",nextText:">"});
+
+		function checkSt(){
+			if($(window).scrollTop() >= $(".advantage").offset().top - $(window).height()/2){
+				$(".advantage .list").addClass("active");
+			}
+			console.log($(window).scrollTop(),$(".advantage").offset().top);
+		}
+		$(window).scroll(function(){
+			checkSt();
+		});
+		window.onload = function(){
+			checkSt();
+		}
+	});
+</script>
+
+</body></html>

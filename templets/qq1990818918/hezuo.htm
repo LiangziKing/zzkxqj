@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html><head lang="zh-CN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">    
+<meta name="keywords" content="{dede:field.keywords/}">
+	<link rel="stylesheet" href="/images/animate.min.css">
+<link rel="stylesheet" href="/images/normalize.css">
+<link rel="stylesheet" href="/images/public.css"><!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="http://cdn.bootcss.com/placeholders/4.0.1/placeholders.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="/images/layer.css" id="layui_layer_skinlayercss"></head>
+<body>
+{dede:include filename="head.htm"/}
+
+	<style>
+	.designer-list li .pic{height: 200px;}
+	</style>
+<div class="main">
+
+
+<div class="dangqian">
+	<div class="container">
+		<div class="crumb">当前位置：{dede:field name='position'/}</div>
+		</div>
+			</div>
+	
+		
+		<div class="service-banner size-banner">
+		
+	</div>
+	
+	
+	
+	<div class="service-nav">
+		<div class="container">
+			<ul class="list clearfix">
+			
+			{dede:channel type='son' row='10' currentstyle="<li class='active'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+			
+				<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+				{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="container">
+		<div class="designer-list">
+			<ul class="list clearfix">
+								
+								
+								{dede:list pagesize='16' titlelen='60'}
+									<li>
+						<a href="[field:arcurl/]" class="pic" style="height:160px"><img src="[field:litpic/]"></a>
+						<div class="desc clearfix">
+							<h3 style="text-align:center;"><a href="[field:arcurl/]">[field:title/]</a></h3>
+						
+						
+						</div>
+					</li>
+					{/dede:list}
+					
+								
+								
+			</ul>
+		</div>
+		<div class="pagenav">
+				{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}	</div>
+	</div>
+</div>
+{dede:include filename="footer.htm"/}
+
+</body></html>
+

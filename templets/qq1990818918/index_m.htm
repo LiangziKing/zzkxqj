@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">        
+    	<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}">    
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+     <link rel="stylesheet" type="text/css" href="/wapimg/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/base.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/main.css">
+     <script src="/wapimg/jquery-1.11.2.min.js"></script>
+        <script src="/wapimg/jquery.form.js"></script>
+        
+    </head>
+
+    <body>
+    	<section class="g-bd f-add-contact">
+        	<!-- 顶部通栏Start -->
+            <header class="g-head index">
+                <!-- 城市切换 -->
+              
+                <!-- logo -->
+                <a class="u-logo" href="/m"><h1>{dede:global.cfg_name/}</h1></a>
+                <!-- 搜索 -->
+               
+            </header>
+            <!-- 顶部通栏End -->
+        
+           
+            
+            <!-- banner Start -->
+             <section class="g-banner">
+                <ul class="swiper-wrapper m-banner-wrap">
+				
+				
+				{dede:arclist  orderby='' typeid='38' row=5 }
+                	<li class="swiper-slide"><a href='[field:arcurl/]'><img src="[field:litpic/]" alt=""  /></a></li>
+					{/dede:arclist}               
+					
+					</ul>
+                <div class="m-banner-icons"><div class="m-banner-icons-in"></div></div>
+            </section>
+
+            <!-- banner End -->
+            
+          
+            
+            <!-- 导航菜单Start -->
+            <ul class="g-navigate clearfix">
+            	
+				
+				<li>
+               		{dede:type typeid='1'}<a class="u-navigate-item u-navigate-item-02" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+			   
+			   
+			   
+			   
+               <li>
+               		{dede:type typeid='87'}<a class="u-navigate-item u-navigate-item-01" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='65'}<a class="u-navigate-item u-navigate-item-04" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='3'}<a class="u-navigate-item u-navigate-item-03" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='2'}<a class="u-navigate-item u-navigate-item-05" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='4'}<a class="u-navigate-item u-navigate-item-06" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               	{dede:type typeid='5'}<a class="u-navigate-item u-navigate-item-07" href="list.php?tid=[field:id/]">
+                   		<i class="siteCommon"></i>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='75'}<a class="u-navigate-item u-navigate-item-08" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"><em class="u-hot siteCommon"></em></span>
+                        [field:typename/]
+                   </a>{/dede:type}
+               </li>
+            </ul>
+            <!-- 导航菜单End -->
+            
+            <!-- 新闻Start -->
+            <section class="g-module">
+            	 <div class="m-module-tit">
+                 	 <a href="{dede:type typeid='27'}list.php?tid=[field:id/]{/dede:type}">                	 
+                    	<h2><i class="siteCommon mod-item-01"></i>{dede:type typeid='27'}[field:typename/]{/dede:type}</h2>
+                    	<i class="siteCommon arrow"></i>
+                    </a>
+                </div>
+                <ul class="m-news-list g-mn">
+                	
+					{dede:arclist orderby='id' typeid='27' row=4 infolen='140' titlelen='20'  type='image'}
+					<li>
+                        <a href="view.php?aid=[field:id/]">
+                            <dl class="clearfix">
+                                <dt class="u-img-w95-h70 left"><img src="[field:litpic/]" width="95" height="70"></dt>
+                                <dd class="u-infor-show-w60 left">
+                                	  <h5>[field:title/]</h5>
+                                    <p>[field:info/]...</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>{/dede:arclist}
+                </ul>
+            </section>
+            <!-- 新闻End -->
+            
+            <!-- 设计案例Start -->
+            <section class="g-module">
+            	 <div class="m-module-tit">
+                 	 <a href="{dede:type typeid='7'}list.php?tid=[field:id/]{/dede:type}">              	 
+                    	<h2><i class="siteCommon mod-item-02"></i>{dede:type typeid='7'}[field:typename/]{/dede:type}</h2>
+                    	<i class="siteCommon arrow"></i>
+                    </a>
+                   
+                </div>
+                <div id="designCaseBox" class="m-module-tab-box swiper-container-horizontal">
+                	
+					
+					
+					<div class="swiper-wrapper" style="transform: translate3d(-2616px, 0px, 0px); transition-duration: 0ms;">
+					
+					
+					
+                		
+						
+						<div class="swiper-slide swiper-slide-prev" data-index="1" data-swiper-slide-index="1" style="width: 1308px;">
+                             <ul class="m-moditem-list clearfix">
+                             	{dede:arclist orderby='id' typeid='7' row=6 infolen='140' titlelen='40'}
+								<li style="min-height: 140px;">
+                                    <a href="view.php?aid=[field:id/]">
+                                    <img src="[field:litpic/]" style="max-height: 128px;">
+                                        <span class="u-moditem-tit"><em class="left">[field:title/]</em><em class="right">[field:sjname/]</em></span>
+                                   </a>
+                               </li>
+							   
+							   {/dede:arclist}
+							   
+							                        </ul>
+                        </div>
+						
+						
+						
+					
+				   
+				   
+				   
+				   </div>
+                </div>
+            </section>
+            <!-- 设计案例End -->
+            
+           
+            
+            <!-- 设计师Start -->
+            <section class="g-module">
+            	 <div class="m-module-tit">
+                 	 <a href="{dede:type typeid='76'}list.php?tid=[field:id/]{/dede:type}"> 	 
+                    	<h2><i class="siteCommon mod-item-04"></i>{dede:type typeid='76'}[field:typename/]{/dede:type}</h2>
+                    	<i class="siteCommon arrow"></i>
+                    </a>
+             
+                </div>
+                <div   class="m-module-tab-box swiper-container-horizontal">
+                	<div class="swiper-wrapper" ><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" >
+                            <ul class="m-module-col3-list clearfix">
+                            	
+								{dede:arclist orderby='id' typeid='76' row=6  titlelen='20'}
+								<li style="min-height: 90px;">
+                                    <a href="view.php?aid=[field:id/]">
+                                        <img src="[field:litpic/]" style="max-height: 128px;height:70px">
+                                        <span class="u-moditem-tit"><em class="left">[field:title/]</em><em class="right f-txt-12"></em></span>
+                                   </a>
+                               </li>
+							   
+							   
+							  {/dede:arclist}            
+                           </ul>
+                       </div>
+					   
+					
+					   
+					   
+					   
+					   
+					   
+                		</div>
+                </div>
+            </section>
+            <!-- 设计师End -->
+            
+            <!-- 在建工地Start -->
+            <section class="g-module">
+            	 <div class="m-module-tit">
+                 	 <a href="{dede:type typeid='75'}list.php?tid=[field:id/]{/dede:type}">  <h2><i class="siteCommon mod-item-05"></i>{dede:type typeid='75'}[field:typename/]{/dede:type}</h2> </a>
+          
+                </div>
+                <div id="technologyBox" class="m-module-tab-box">
+                	<div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                             <ul class="m-moditem-list clearfix">
+                             	
+								{dede:arclist orderby='id' typeid='75' row=4  titlelen='20'}
+								<li>
+                                    <a href="view.php?aid=[field:id/]">
+                                        <img src="[field:litpic/]" style=" max-height:128px">
+                                        <span class="u-moditem-tit">[field:title/]</span>
+                                   </a>
+                               </li>
+							    {/dede:arclist} 
+							   
+							   
+							   
+							                    
+                        	   </ul>
+                        </div>
+                         
+                	</div>
+                </div>
+            </section>
+            <!-- 在建工地End -->
+                         <!-- 保洁白皮书Start -->
+            <section class="g-module">
+            	 <div class="m-module-tit">
+                 	 <a href="{dede:type typeid='4'}list.php?tid=[field:id/]{/dede:type}">                	 
+                    	<h2 style="padding-left: 25px; width: 86px;"><i class="siteCommon mod-item-08"></i>{dede:type typeid='4'}[field:typename/]{/dede:type}</h2>
+                    	<i class="siteCommon arrow"></i>
+                    </a>
+ <ul id="whitePaperBtn" class="m-module-tab-btn clearfix">
+                        <li data-index="0"  class="active" ><a href="javascript:;">{dede:type typeid='27'}[field:typename/]{/dede:type}</a></li>
+						<li data-index="1"   ><a href="javascript:;">{dede:type typeid='28'}[field:typename/]{/dede:type}</a></li>
+						<li data-index="2"   ><a href="javascript:;">{dede:type typeid='29'}[field:typename/]{/dede:type}</a></li>  
+						<li data-index="3"   ><a href="javascript:;">{dede:type typeid='30'}[field:typename/]{/dede:type}</a></li>                  </ul>                	
+
+                </div>
+               <div id="whitePaperBox" class="m-module-tab-box">
+                    <div class="swiper-wrapper">                
+                    	<div class="swiper-slide">                            <ul class="m-news-list g-mn">
+                            	
+								{dede:arclist orderby='id' typeid='27' row=4 infolen='140' titlelen='20'  type='image'}
+					<li>
+                        <a href="view.php?aid=[field:id/]">
+                            <dl class="clearfix">
+                                <dt class="u-img-w95-h70 left"><img src="[field:litpic/]" width="95" height="70"></dt>
+                                <dd class="u-infor-show-w60 left">
+                                	  <h5>[field:title/]</h5>
+                                    <p>[field:info/]...</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>{/dede:arclist}                   
+                            </ul>
+            			 </div>
+
+
+
+
+
+
+<div class="swiper-slide">
+                            <ul class="m-news-list g-mn">
+                            	{dede:arclist orderby='id' typeid='28' row=4 infolen='140' titlelen='20'  type='image'}
+					<li>
+                        <a href="view.php?aid=[field:id/]">
+                            <dl class="clearfix">
+                                <dt class="u-img-w95-h70 left"><img src="[field:litpic/]" width="95" height="70"></dt>
+                                <dd class="u-infor-show-w60 left">
+                                	  <h5>[field:title/]</h5>
+                                    <p>[field:info/]...</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>{/dede:arclist}                                           
+                            </ul>
+            			 </div>
+
+
+
+<div class="swiper-slide">
+                            <ul class="m-news-list g-mn">
+                            	{dede:arclist orderby='id' typeid='29' row=4 infolen='140' titlelen='20'  type='image'}
+					<li>
+                        <a href="view.php?aid=[field:id/]">
+                            <dl class="clearfix">
+                                <dt class="u-img-w95-h70 left"><img src="[field:litpic/]" width="95" height="70"></dt>
+                                <dd class="u-infor-show-w60 left">
+                                	  <h5>[field:title/]</h5>
+                                    <p>[field:info/]...</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>{/dede:arclist}                                         
+                            </ul>
+            			 </div>     
+
+
+
+
+<div class="swiper-slide">
+                            <ul class="m-news-list g-mn">
+                            	{dede:arclist orderby='id' typeid='30' row=4 infolen='140' titlelen='20'  type='image'}
+					<li>
+                        <a href="view.php?aid=[field:id/]">
+                            <dl class="clearfix">
+                                <dt class="u-img-w95-h70 left"><img src="[field:litpic/]" width="95" height="70"></dt>
+                                <dd class="u-infor-show-w60 left">
+                                	  <h5>[field:title/]</h5>
+                                    <p>[field:info/]...</p>
+                                </dd>
+                            </dl>
+                        </a>
+                    </li>{/dede:arclist}                                         
+                            </ul>
+            			 </div> 
+
+
+
+
+
+
+</div>
+                </div>
+            </section>
+            <!-- 保洁白皮书End -->
+            
+                     
+            
+            <!-- 售后流程Start -->
+            <section class="g-module">
+            	 <div class="m-module-tit clearfix">
+                 	 <a class="left" href="tel:{dede:global.cfg_tel/}">
+                    	<h2><i class="siteCommon mod-item-09"></i>保洁流程</h2>
+                    </a>
+                    <span class="right f-txt-585858 f-txt-14">预约热线：<b class="f-txt-af1f30">{dede:global.cfg_tel/}</b></span>
+                </div>
+                <ul class="m-after-sales clearfix">
+                	
+					
+					
+					 <li class="u-after-sales-step u-after-sales-step-01">
+                    	<a href="tel:{dede:global.cfg_tel/}"><i class="siteCommon"></i>电话预约</a>
+                       <i class="u-after-sales-line siteCommon"></i>
+                    </li>
+                    <li class="u-after-sales-step u-after-sales-step-02">
+                    	<a href="tel:{dede:global.cfg_tel/}"><i class="siteCommon"></i>上门量房</a>
+                       <i class="u-after-sales-line siteCommon"></i>
+                    </li>
+					  <li class="u-after-sales-step u-after-sales-step-04">
+                    	<a href="tel:{dede:global.cfg_tel/}"><i class="siteCommon"></i>签订合同</a>
+						  <i class="u-after-sales-line siteCommon"></i>
+                    </li>
+					
+					
+                    <li class="u-after-sales-step u-after-sales-step-03">
+                    	<a href="tel:{dede:global.cfg_tel/}"><i class="siteCommon"></i>开始施工</a>
+                     
+                    </li>
+                  
+					
+					
+					
+					
+                </ul>
+            </section>
+            <!-- 售后流程End -->
+            
+             
+        
+      {dede:include filename="footer_m.htm"/}
+    	
+    	    	
+	<script src="/wapimg/component.js"></script>
+    <script src="/wapimg/swiper.jquery.min.js"></script>
+            
+    <script>
+		// 焦点图
+		var swiper = new Swiper('.g-banner', {
+			pagination: '.m-banner-icons-in',
+			paginationClickable: true,
+			centeredSlides: true,
+			autoplay: 4500,
+			loop: true,
+			autoplayDisableOnInteraction: false
+		});
+		
+		// 消息滚动切换
+		var swiper2 = new Swiper('.g-news-notification', {
+			// paginationClickable: true,
+			autoplay: 5000,
+			loop: true,
+			noSwiping : true,
+			direction: 'vertical'
+		});
+		
+		// 全案产品
+		var mousewheelswiper1 = new Swiper('#productCaseBox', {
+			pagination: '#productCaseBtn',
+			paginationClickable: true,
+			bulletClass : 'u-tab-btn-ele',
+			bulletActiveClass : 'active',
+			loop: true,
+			paginationBulletRender: function (index, className) {
+				switch (index) {
+					case 0:
+						name = '城东南';
+						break;case 1:
+						name = '江宁';
+						break;case 2:
+						name = '河西';
+						break;case 3:
+						name = '鼓北';
+						break;				}
+				return '<li class="' + className + '"><a href="javascript:;">' + name + '</a></li>';
+			}
+		})
+		
+		// 设计案例
+		var mousewheelswiper2 = new Swiper('#designCaseBox', {
+			pagination: '#designCaseBtn',
+			paginationClickable: true,
+			bulletClass : 'u-tab-btn-ele',
+			bulletActiveClass : 'active',
+			loop: true,
+			paginationBulletRender: function (index, className) {
+				switch (index) {
+
+					case 0:
+						name = '{dede:type typeid='17'}[field:typename/]{/dede:type}';
+						break;case 1:
+						name = '{dede:type typeid='18'}[field:typename/]{/dede:type}';
+						break;case 2:
+						name = '{dede:type typeid='20'}[field:typename/]{/dede:type}';
+						break;case 3:
+						name = '{dede:type typeid='19'}[field:typename/]{/dede:type}';
+						break;					 
+				}
+				return '<li class="' + className + '"><a href="javascript:;">' + name + '</a></li>';
+			}
+		})
+		
+		// 设计师
+		var mousewheelswiper3 = new Swiper('#designerBox', {
+			pagination: '#designerBtn',
+			paginationClickable: true,
+			bulletClass : 'u-tab-btn-ele',
+			bulletActiveClass : 'active',
+			loop: true,
+			paginationBulletRender: function (index, className) {
+				switch (index) {
+					case 0:
+						name = '高级';
+						break;case 1:
+						name = '主任';
+						break;case 2:
+						name = '主案';
+						break;case 3:
+						name = '首席';
+						break;				}
+				return '<li class="' + className + '"><a href="javascript:;">' + name + '</a></li>';
+			}
+		})
+	 
+		
+		// 建材商城
+		var mousewheelswiper5 = new Swiper('#buildingMaterialsBox', {
+			pagination: '#buildingMaterialsBtn',
+			paginationClickable: true,
+			bulletClass : 'u-tab-btn-ele',
+			bulletActiveClass : 'active',
+			loop: true,
+			paginationBulletRender: function (index, className) {
+				switch (index) {
+					case 0:
+						name = '瓷砖';
+						break;case 1:
+						name = '地板';
+						break;case 2:
+						name = '卫浴';
+						break;case 3:
+						name = '橱柜';
+						break;				}
+				return '<li class="' + className + '"><a href="javascript:;">' + name + '</a></li>';
+			}
+		})
+		
+		// 保洁白皮书
+		var mousewheelswiper6 = new Swiper('#whitePaperBox', {
+			pagination: '#whitePaperBtn',
+			paginationClickable: true,
+			bulletClass : 'u-tab-btn-ele',
+			bulletActiveClass : 'active',
+			loop: true,
+			paginationBulletRender: function (index, className) {
+				switch (index) {
+					case 0:
+						name = '{dede:type typeid='27'}[field:typename/]{/dede:type}';
+						break;case 1:
+						name = '{dede:type typeid='28'}[field:typename/]{/dede:type}';
+						break;case 2:
+						name = '{dede:type typeid='29'}[field:typename/]{/dede:type}';
+						break;case 3:
+						name = '{dede:type typeid='30'}[field:typename/]{/dede:type}';
+						break;				}
+				return '<li class="' + className + '"><a href="javascript:;">' + name + '</a></li>';
+			}
+		})
+		
+		// 主材品牌
+		var mousewheelswiper7 = new Swiper('#brandNameBox', {
+			pagination: '#brandNameBtn',
+			paginationClickable: true,
+			bulletClass : 'u-tab-btn-ele',
+			bulletActiveClass : 'active',
+			loop: true,
+			paginationBulletRender: function (index, className) {
+				switch (index) {
+					case 0:
+						name = '瓷砖';
+						break;case 1:
+						name = '地板';
+						break;case 2:
+						name = '卫浴';
+						break;case 3:
+						name = '橱柜';
+						break;				}
+				return '<li class="' + className + '"><a href="javascript:;">' + name + '</a></li>';
+			}
+		})
+		
+    </script>
+    
+</body></html>

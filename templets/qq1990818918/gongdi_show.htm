@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html><head lang="zh-CN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<title>{dede:field name='title'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description /}">    
+<meta name="keywords" content="{dede:field.keywords/}">
+
+	<link rel="stylesheet" href="/images/animate.min.css">
+<link rel="stylesheet" href="/images/normalize.css">
+<link rel="stylesheet" href="/images/public.css"><!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="http://cdn.bootcss.com/placeholders/4.0.1/placeholders.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="/images/layer.css" id="layui_layer_skinlayercss">
+
+<script type="text/javascript" language="javascript">
+//验证码 
+function changeAuthCode() { 
+    var num =     new Date().getTime();
+    var rand = Math.round(Math.random() * 10000);
+    num = num + rand;
+    $('#ver_code').css('visibility','visible');
+    if ($("#vdimgck")[0]) {
+        $("#vdimgck")[0].src = "/include/vdimgck.php?tag=" + num;
+    }
+    return false;    
+}
+</script>
+
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+<div class="main">
+
+
+
+<div class="dangqian">
+	<div class="container">
+		<div class="crumb">当前位置：{dede:field name='position'/}</div>
+		</div>
+			</div>
+	
+		
+		<div class="service-banner size-banner">
+		
+	</div>
+	
+	
+	<div class="container">
+	
+		<div class="site clearfix">
+			<div class="detail pull-left">
+				<header>
+					<h3>{dede:field.title/} <span style="color: #666;font-size: 22px;font-weight: normal;">[{dede:field.jingcheng/}]</span></h3>
+					<div class="desc">
+						<span><b>风格</b>：{dede:field.fengge/} &nbsp;&nbsp;  <b>面积</b>：{dede:field.mianji/} &nbsp;&nbsp; <b>户型</b>：{dede:field.huxing/}&nbsp;&nbsp;  <b>业主</b>：{dede:field.yezhu/}</span>
+					<div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到QQ空间" class="bshare-qzone" href="javascript:void(0);"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到手机" class="bshare-shouji" href="javascript:void(0);"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+					</div>
+				</header>
+				<section>
+					{dede:field.body/}		</section>
+			</div>
+			<div class="offer pull-right">
+				<header class="offer-title">
+					<h3>快速报价</h3>
+					<p>填写信息 即刻获取</p>
+				</header>
+					{dede:include filename="right.htm"/}
+				
+				
+				
+				
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+{dede:include filename="footer.htm"/}
+
+</body></html>

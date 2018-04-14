@@ -1,0 +1,123 @@
+<script type="text/javascript">
+if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="/m";
+            }else if(/iPad/i.test(navigator.userAgent)){
+                window.location.href="/m";
+            }else{
+                window.location.href="/m"
+            }
+        }catch(e){}
+    }
+}
+</script>
+
+<header id="header" class="header">
+	<div class="topbar">
+		<div class="container clearfix">
+			<div class="pull-left">{dede:global.cfg_hygl/}</div>
+			<div class="pull-right">
+				切换为：<script type="text/javascript" src="/images/language.js"></script><span>|</span><a href="/data/sitemap.html">网站地图</a><span>|</span>{dede:type typeid='37'}<a href="[field:typeurl/]">[field:typename/]</a>{/dede:type}
+			</div>
+		</div>
+	</div>
+	<div class="head">
+		<div class="container clearfix">
+			<a href="/" class="head-logo pull-left"><img src="/images/logo.png" alt="{dede:global.cfg_webname/}" draggable="false"></a>
+			<div class="head_tell  pull-right">
+					<div class="pic"><img src="/images/head_tell.png" alt="">咨询热线</div>
+					<div class="desc">{dede:global.cfg_tel/}</div>
+			</div>
+			<nav class="head-nav pull-right">
+				<ul class="list clearfix">
+					<li class="nosub {dede:field name=typeid runphp="yes"}(@me=="")? @me="active":@me="";{/dede:field}"><a href="/">首页</a></li>
+					
+					{dede:channel type='top' row='7' currentstyle="<li class='active'><a  href='~typelink~' ~rel~>~typename~</a></li>"}
+					<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+					{/dede:channel}
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="subnav">
+		<div class="container">
+			<ul class="subnav-list list clearfix" style="margin-left: 300px;">
+			
+			{dede:channel type='son' row='20' typeid='87'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			
+								
+							</ul>
+		</div>
+	</div>
+	<div class="subnav">
+		<div class="container">
+			<ul class="subnav-list list clearfix" style="margin-left: 413px;">
+					{dede:channel type='son' row='20' typeid='1'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	<div class="subnav">
+		<div class="container clearfix">
+			<ul class="subnav-list list clearfix" style="margin-left: 523px;">
+					{dede:channel type='son' row='20' typeid='65'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	<div class="subnav">
+		<div class="container clearfix">
+			<ul class="subnav-list list pull-right">
+					{dede:channel type='son' row='20' typeid='3'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="subnav">
+		<div class="container clearfix">
+			<ul class="subnav-list list pull-right">
+					{dede:channel type='son' row='20' typeid='2'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div class="subnav">
+		<div class="container clearfix">
+			<ul class="subnav-list list pull-right">
+					{dede:channel type='son' row='20' typeid='4'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	
+	
+	<div class="subnav">
+		<div class="container clearfix">
+			<ul class="subnav-list list pull-right">
+					{dede:channel type='son' row='20' typeid='5'}
+<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+</header>

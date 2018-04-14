@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">  
+<title>{dede:field name='title'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">    
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+        <link rel="stylesheet" type="text/css" href="/wapimg/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/base.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/main.css">
+      <script src="/wapimg/jquery-1.11.2.min.js"></script>
+        <script src="/wapimg/jquery.form.js"></script>
+        
+    </head>
+    
+    <body>
+    	{dede:include filename="head_m.htm"/}
+            <!-- 顶部通栏End -->	
+      
+            <section id="tabNav" class="swiper-container-horizontal swiper-container-free-mode">
+                <ul class="swiper-wrapper">
+                   {dede:channel type='son' row='20' currentstyle="<li class='swiper-slide active'><a href='list.php?tid=~id~' ~rel~>~typename~</a><i class='siteCommon'></i></li>"}
+               <li class="swiper-slide">  <a href="list.php?tid=[field:id/]">[field:typename/]</a><i class="siteCommon"></i></li>
+			   {/dede:channel}
+              
+                    
+                </ul>
+            </section>    
+                
+            <section class="g-tab-wrap">
+            	 
+                
+              
+          <!-- 作品详情Start -->
+            <section class="g-module">
+                <div class="m-module-tit">
+                	<h2><i class="siteCommon mod-item-24"></i>{dede:field.title/}（{dede:field.zhiwen/}）</h2>
+                </div>
+                <div class="g-mn"  style="top:0">
+              <cneter><img src="{dede:field.litpic /}"></center><br>
+			  <b>工作年限</b>：{dede:field.jingyan/}年<br>
+			 <b>设计理念</b>：{dede:field.jianjie/}<br>
+			 <b>代表作品</b>：{dede:field.zuopin/}
+		
+			  
+			       </div>
+            </section>
+           
+          
+        	<section class="g-module">
+                <div class="m-module-tit">
+                	<h2><i class="siteCommon mod-item-23"></i>设计师介绍</h2>
+                </div>
+                <div class="g-mn f-mar-10-0">
+                	{dede:field.body/}
+                </div>
+            </section>
+            
+           
+           
+            
+           
+            
+    
+
+
+          
+                 
+                      {dede:include filename="footer_m.htm"/}
+    	
+    	    	
+	<script src="/wapimg/component.js"></script>
+    <script src="/wapimg/swiper.jquery.min.js"></script>
+      
+    <script>
+		(function(){
+			var mySwiper1 = new Swiper('#tabNav',{
+				freeMode : true,
+				slidesPerView : 'auto',
+			});
+			tabFun($('.swiper-wrapper'), $('.g-tab-wrap'), 'click');
+			// 切换后滚动条回到顶部
+			$('.swiper-wrapper').click(function() {
+				$('html,body').scrollTop(0);
+			});
+		})();
+    	(function() {
+			// 全国分公司
+			$('.u-accordion-tit').each(function(index) {
+				var iSwithch = true;
+                $(this).click(function() {
+					iSwithch = $(this).hasClass('active');
+					if ( iSwithch ) {
+						$(this).removeClass('active').next('.m-station-group').slideUp();
+					} else {
+						$('.m-station-group').slideUp();
+						$('.u-accordion-tit').removeClass('active');
+						$(this).addClass('active').next('.m-station-group').slideDown();
+					}
+				});
+            });
+		})();
+    </script>
+    
+</section></body></html>

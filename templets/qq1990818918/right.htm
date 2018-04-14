@@ -1,0 +1,70 @@
+	<form action="/plus/diy.php" method="post" enctype="multipart/form-data">
+				
+				<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="2" />
+<input type="hidden" name="do" value="2" />
+
+				<div class="form">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入您的姓名" name="contact" title="请输入您的姓名">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入您的房屋面积" name="area" title="请输入您的房屋面积">
+						<ins>平米</ins>
+					</div>
+					
+					
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入楼盘地址" name="addr" title="请输入楼盘地址">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="请输入您的手机号码" name="phone" title="请输入您的手机号码">
+					</div>
+					<div class="form-list clearfix">
+						<div class="form-group col-6">
+						
+						<input name="validate" class="form-control" placeholder="输入验证码" type="text" id="vdcode" style="text-transform:uppercase;" size="8"/>
+						
+						
+						
+						</div>
+						<div class="form-group col-6" style="height:31px;line-height:27px;">
+						
+<img  style="margin-left:10px;" id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/include/vdimgck.php" />
+						
+							
+						</div>
+					</div>
+					
+					
+					<input name="tijiaoshijian" value="" type="hidden"  id="tijiaoshijian"  />
+
+      <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)
+
++"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()
+
++":"+nowDate.getSeconds();
+
+                    document.getElementById("tijiaoshijian").value=str;
+
+                    }
+
+                    </script><input type="hidden" name="dede_fields" value="contact,text;sex,radio;phone,text;addr,text;area,text;cost,text;unit,text;dstyle,text;shejishi,text;content,multitext;dtime,text;tijiaoshijian,text" />
+<input type="hidden" name="dede_fieldshash" value="3571ac5a9270c7a7a15f2c0cda47dce2" />
+				
+					<div class="form-group">
+						
+						<input type="submit" class="btn btn-submit" value="获取报价">
+					</div>
+				</div>
+				</form>
+			
+				
+			

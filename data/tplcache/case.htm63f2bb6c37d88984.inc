@@ -1,0 +1,40 @@
+<?php
+$z[0]=Array("field","",201,230);
+$z[0][4]=array();
+$z[0][4]['name']="typename";
+$z[1]=Array("global","",231,257);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",301,352);
+$z[2][4]=array();
+$z[2][4]['name']="description";
+$z[2][4]['function']="html2text(@me)";
+$z[3]=Array("field","",391,413);
+$z[3][4]=array();
+$z[3][4]['name']="keywords";
+$z[4]=Array("include","",955,990);
+$z[4][4]=array();
+$z[4][4]['filename']="head.htm";
+$z[5]=Array("field","",1104,1133);
+$z[5][4]=array();
+$z[5][4]['name']="position";
+$z[6]=Array("channel","\r\n			\r\n				<li><a href='[field:typeurl/]'>[field:typename/]</a></li>\r\n				",1325,1529);
+$z[6][4]=array();
+$z[6][4]['type']="son";
+$z[6][4]['row']="10";
+$z[6][4]['currentstyle']="<li class='active'><a href='~typelink~' ~rel~>~typename~</a></li>";
+$z[7]=Array("php","AddFilter(2,1,'fengge,huxing,mianji');",1636,1695);
+$z[7][4]=array();
+$z[8]=Array("list","\r\n								<li>\r\n					<a href=\"[field:arcurl/]\">\r\n						<div class=\"pic\"><img src=\"[field:litpic/]\"></div>\r\n						<div class=\"desc clearfix\">\r\n							<div class=\"hd pull-right\">\r\n								<img src=\"[field:sjstx/]\" class=\"pull-left\">\r\n								[field:sheji/]						</div>\r\n							<h3>[field:title/]</h3>\r\n							<dl class=\"clearfix\">\r\n								<dd>[field:fengge/]</dd>\r\n								<dd>[field:mianji/]</dd>\r\n								<dd>[field:huxing/]</dd>\r\n							</dl>\r\n						</div>\r\n					</a>\r\n				</li>",1802,2332);
+$z[8][4]=array();
+$z[8][4]['pagesize']="9";
+$z[8][4]['titlelen']="60";
+$z[9]=Array("pagelist","",2396,2467);
+$z[9][4]=array();
+$z[9][4]['listitem']="info,index,end,pre,next,pageno";
+$z[9][4]['listsize']="5";
+$z[10]=Array("include","",2496,2533);
+$z[10][4]=array();
+$z[10][4]['filename']="footer.htm";
+
+?>

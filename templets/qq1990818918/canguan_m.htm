@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">  
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">    
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+        <link rel="stylesheet" type="text/css" href="/wapimg/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/base.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/main.css">
+      <script src="/wapimg/jquery-1.11.2.min.js"></script>
+        <script src="/wapimg/jquery.form.js"></script>
+        
+    </head>
+    
+    <body>
+    	
+
+<section class="g-bd f-add-contact" style="padding-top: 90px;"> 
+        	<!-- 顶部通栏Start -->
+            <header class="g-head">
+                 <!-- 返回前一页按钮 -->
+                <a class="u-back" href="javascript:;" onClick="history.go(-1)"><i class="siteCommon"></i>返回</a>
+                           		<h2>{dede:field name='typename'/} </h2>                
+                <!-- 搜索 -->
+               
+                <!-- 目录 -->
+                <div class="m-menu">
+                    <a class="u-menu" href="javascript:;"><i class="siteCommon"></i>目录</a>
+                   <ul class="g-navigate clearfix" style="display: none;">
+                       
+					   
+					    <li>
+                           <a class="u-navigate-item u-navigate-item-09" href="/m">
+                               <span class="siteCommon"></span>
+                               网站首页
+                           </a>
+                       </li>
+                      <li>
+               		{dede:type typeid='1'}<a class="u-navigate-item u-navigate-item-02" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+			   
+			   
+			   
+			   
+               <li>
+               		{dede:type typeid='87'}<a class="u-navigate-item u-navigate-item-01" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='65'}<a class="u-navigate-item u-navigate-item-04" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='3'}<a class="u-navigate-item u-navigate-item-03" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='2'}<a class="u-navigate-item u-navigate-item-05" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               		{dede:type typeid='5'}<a class="u-navigate-item u-navigate-item-07" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+               <li>
+               	{dede:type typeid='75'}<a class="u-navigate-item u-navigate-item-08" href="list.php?tid=[field:id/]">
+                   		<span class="siteCommon"></span>
+                       [field:typename/]
+                   </a>{/dede:type}
+               </li>
+                    </ul>
+                </div>
+            </header>
+            <!-- 顶部通栏End -->	
+
+            
+        
+            <!-- 顶部通栏End -->	
+      
+            <section id="tabNav" class="swiper-container-horizontal swiper-container-free-mode">
+                <ul class="swiper-wrapper">
+                   {dede:channel type='son' row='20' currentstyle="<li class='swiper-slide active'><a href='list.php?tid=~id~' ~rel~>~typename~</a><i class='siteCommon'></i></li>"}
+               <li class="swiper-slide">  <a href="list.php?tid=[field:id/]">[field:typename/]</a><i class="siteCommon"></i></li>
+			   {/dede:channel}
+              
+                    
+                </ul>
+            </section>    
+                
+            <section class="g-tab-wrap">
+            	 
+                
+                <section class="g-tab-box g-mn">
+                	
+
+
+					<div class="biaodan">
+					
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="3" />
+<input type="hidden" name="do" value="2" />
+
+
+
+<input type='text' name='name' id='name'  class='intxt' value=''   placeholder="您的姓名"/>
+<input type='text' name='phone' id='phone'  class='intxt' value=''   placeholder="您的手机号码"/>
+
+<div><div style="float:left;width:60%;"><input name="validate" class="intxt" placeholder="输入验证码" type="text" id="vdcode"  style="text-transform:uppercase;" size="8"/></div>
+<div style="height:31px;line-height:27px;float:left;width:40%"><img  style="margin-left:10px;" id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/include/vdimgck.php" /></div>
+</div>
+
+
+<input name="tijiaoshijian" value="" type="hidden"  id="tijiaoshijian"  />
+
+      <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)
+
++"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()
+
++":"+nowDate.getSeconds();
+
+                    document.getElementById("tijiaoshijian").value=str;
+
+                    }
+
+                    </script><input type="hidden" name="dede_fields" value="name,text;phone,text;tijiaoshijian,text" />
+<input type="hidden" name="dede_fieldshash" value="cfd7d5510895eca96b97e12f558eb9f9" />
+
+
+<input type="submit" name="submit" value="确认提交" class='coolbg' />
+</form>
+</div>
+
+
+           </section>
+                 
+                      {dede:include filename="footer_m.htm"/}
+    	
+    	    	
+	<script src="/wapimg/component.js"></script>
+    <script src="/wapimg/swiper.jquery.min.js"></script>
+      
+    <script>
+		(function(){
+			var mySwiper1 = new Swiper('#tabNav',{
+				freeMode : true,
+				slidesPerView : 'auto',
+			});
+			tabFun($('.swiper-wrapper'), $('.g-tab-wrap'), 'click');
+			// 切换后滚动条回到顶部
+			$('.swiper-wrapper').click(function() {
+				$('html,body').scrollTop(0);
+			});
+		})();
+    	(function() {
+			// 全国分公司
+			$('.u-accordion-tit').each(function(index) {
+				var iSwithch = true;
+                $(this).click(function() {
+					iSwithch = $(this).hasClass('active');
+					if ( iSwithch ) {
+						$(this).removeClass('active').next('.m-station-group').slideUp();
+					} else {
+						$('.m-station-group').slideUp();
+						$('.u-accordion-tit').removeClass('active');
+						$(this).addClass('active').next('.m-station-group').slideDown();
+					}
+				});
+            });
+		})();
+    </script>
+    
+</section></body></html>

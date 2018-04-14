@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html><head lang="zh-CN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">    
+<meta name="keywords" content="{dede:field.keywords/}">
+	<link rel="stylesheet" href="/images/animate.min.css">
+<link rel="stylesheet" href="/images/normalize.css">
+<link rel="stylesheet" href="/images/public.css"><!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="http://cdn.bootcss.com/placeholders/4.0.1/placeholders.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="/images/layer.css" id="layui_layer_skinlayercss">
+
+
+<script type="text/javascript" language="javascript">
+//验证码 
+function changeAuthCode() { 
+    var num =     new Date().getTime();
+    var rand = Math.round(Math.random() * 10000);
+    num = num + rand;
+    $('#ver_code').css('visibility','visible');
+    if ($("#vdimgck")[0]) {
+        $("#vdimgck")[0].src = "/include/vdimgck.php?tag=" + num;
+    }
+    return false;    
+}
+</script>
+
+
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+<div class="main">
+
+
+<div class="dangqian">
+	<div class="container">
+		<div class="crumb">当前位置：{dede:field name='position'/}</div>
+		</div>
+			</div>
+	
+		
+		<div class="service-banner size-banner">
+		
+	</div>
+	
+	
+	<div class="service-nav">
+		<div class="container">
+			<ul class="list clearfix">
+			
+			{dede:channel type='son' row='10' currentstyle="<li class='active'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+			
+				<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+				{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	
+	
+	
+
+	<div class="container">
+		
+		
+		
+		
+		<div class="classroom clearfix">
+			<div class="classroom-box pull-left">
+				
+				<div>
+					<div class="classroom-list">
+						<ul class="list">
+													
+													
+													{dede:list pagesize='5' titlelen='60'}
+													
+														<li class="clearfix gongdi">
+								<a href="[field:arcurl/]" class="pic pull-left"><img src="[field:litpic/]"></a>
+								<h3><a href="[field:arcurl/]">[field:title/] &nbsp;<span class="jc">[[field:jingcheng/]]</span></a></h3>
+								<p><span><b>风格</b>：[field:fengge/]</span>  <b>面积</b>：[field:mianji/] </p>
+								<p><span><b>户型</b>：[field:huxing/]</span>   <b>业主</b>：[field:yezhu/] </p>
+								<a href="/pinzhifuwu/canguangongdi/" class="pull-left yy" target="_blank">预约参观</a>
+							</li>
+									{/dede:list}				
+													</ul>
+													
+													
+													<div class="pagenav">
+						{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}					</div>
+													
+						
+					</div>
+				
+				
+				
+				
+				</div>
+				
+			</div>
+			<div class="offer pull-right">
+				<header class="offer-title">
+					<h3>快速报价</h3>
+					<p>填写信息 即刻获取</p>
+				</header>
+			{dede:include filename="right.htm"/}
+				
+				
+				
+				
+				
+			</div>
+			
+			
+				
+			
+		</div>
+		
+		
+		
+		
+		
+	</div>
+</div>
+{dede:include filename="footer.htm"/}
+
+</body></html>

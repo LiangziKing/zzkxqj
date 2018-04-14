@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html><head lang="zh-CN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">    
+<meta name="keywords" content="{dede:field.keywords/}">
+	<link rel="stylesheet" href="/images/animate.min.css">
+<link rel="stylesheet" href="/images/normalize.css">
+<link rel="stylesheet" href="/images/public.css"><!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<script src="http://cdn.bootcss.com/placeholders/4.0.1/placeholders.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="/images/layer.css" id="layui_layer_skinlayercss">
+
+<script type="text/javascript" language="javascript">
+//验证码 
+function changeAuthCode() { 
+    var num =     new Date().getTime();
+    var rand = Math.round(Math.random() * 10000);
+    num = num + rand;
+    $('#ver_code').css('visibility','visible');
+    if ($("#vdimgck")[0]) {
+        $("#vdimgck")[0].src = "/include/vdimgck.php?tag=" + num;
+    }
+    return false;    
+}
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+	
+<div class="main price-main">
+	<div class="dangqian">
+	<div class="container">
+		<div class="crumb">当前位置：{dede:field name='position'/}</div>
+	</div>	</div>
+	<div class="service-banner size-banner">
+		
+	</div>
+	
+	
+	
+	<div class="service-nav">
+		<div class="container">
+			<ul class="list clearfix">
+			
+			{dede:channel type='son' row='10' currentstyle="<li class='active'><a href='~typelink~' ~rel~>~typename~</a></li>"}
+			
+				<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+				{/dede:channel}
+			</ul>
+		</div>
+	</div>
+	<div class="size">
+	<div class="abouttit">{dede:field name='typename'/}</div>
+	
+	
+		<div class="size-form clearfix">
+			<form action="/plus/diy.php" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="2" />
+<input type="hidden" name="do" value="2" />
+			
+			
+			<input type="text" class="txt pull-left" placeholder="请输入您的楼盘地址" name="addr" title="请输入您的楼盘地址">
+			<input type="text" class="txt pull-right" placeholder="请输入您的房屋面积" name="area" title="请输入您的房屋面积">
+			
+			
+			<input type="text" class="txt pull-left" placeholder="请输入您的保洁风格" name="dstyle" title="请输入您的保洁风格">
+			<input type="text" class="txt pull-right" placeholder="请输入您的户型" name="unit" title="请输入您的户型">
+			
+			
+			<textarea class="txt" placeholder="可输入您的其他要求" name="content" title="可输入您的其他要求"></textarea>
+			
+			
+			<input type="text" class="txt pull-left" placeholder="请输入您的姓名" title="请输入您的姓名" name="contact">
+			
+			<input type="text" class="txt pull-right" placeholder="请输入您的手机号码" name="phone" title="请输入您的手机号码">
+			
+			
+			<div class="input-box pull-left">
+				<input type="text" class="txt pull-left" placeholder="请输入验证码" name="validate" title="请输入验证码">
+				<img  style="margin-left:10px;" id="vdimgck" align="absmiddle" onClick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="/include/vdimgck.php" />
+			</div>
+			
+			
+			<input name="tijiaoshijian" value="" type="hidden"  id="tijiaoshijian"  />
+
+      <script type="text/javascript">
+
+                    window.onload = function(){
+
+                    var nowDate = new Date();
+
+                    var str = nowDate.getFullYear()+"-"+(nowDate.getMonth() + 1)
+
++"-"+nowDate.getDate()+" "+nowDate.getHours()+":"+nowDate.getMinutes()
+
++":"+nowDate.getSeconds();
+
+                    document.getElementById("tijiaoshijian").value=str;
+
+                    }
+
+                    </script><input type="hidden" name="dede_fields" value="contact,text;sex,radio;phone,text;addr,text;area,text;cost,text;unit,text;dstyle,text;shejishi,text;content,multitext;dtime,text;tijiaoshijian,text" />
+<input type="hidden" name="dede_fieldshash" value="3571ac5a9270c7a7a15f2c0cda47dce2" />
+		
+		
+		
+			<button type="submit" class="btn-submit pull-left">立即提交</button>
+			</form>
+		</div>
+	</div>
+</div>
+{dede:include filename="footer.htm"/}
+
+</body></html>

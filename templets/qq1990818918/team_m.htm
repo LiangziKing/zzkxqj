@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    	
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">  
+<title>{dede:field name='typename'/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">    
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+        <link rel="stylesheet" type="text/css" href="/wapimg/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/base.css">
+        <link rel="stylesheet" type="text/css" href="/wapimg/main.css">
+     <script src="/wapimg/jquery-1.11.2.min.js"></script>
+        <script src="/wapimg/jquery.form.js"></script>
+        
+    </head>
+    
+    <body>
+    	{dede:include filename="head_m.htm"/}
+            
+			  <!-- 顶部通栏End -->	
+      
+            <section id="tabNav" class="swiper-container-horizontal swiper-container-free-mode">
+                <ul class="swiper-wrapper">
+                   {dede:channel type='son' row='20' currentstyle="<li class='swiper-slide active'><a href='list.php?tid=~id~' ~rel~>~typename~</a><i class='siteCommon'></i></li>"}
+               <li class="swiper-slide">  <a href="list.php?tid=[field:id/]">[field:typename/]</a><i class="siteCommon"></i></li>
+			   {/dede:channel}
+              
+                    
+                </ul>
+            </section>    
+			
+			
+			
+            <!-- 作品解析Start -->
+            <ul class="m-moditem-list clearfix">
+            	
+				{dede:list pagesize='8' titlelen='20'}
+				<li style="min-height:160px;">
+                    <a href="view.php?aid=[field:id/]">
+                        <img src="[field:litpic/]">
+                        <span class="u-moditem-tit"><em class="f-txt-111 left">[field:title/]</em><em class="f-txt-585858 right">[field:typename/]</em></span>
+                    </a>
+                </li>
+				{/dede:list}
+				
+				
+				
+				           </ul>
+            <!-- 加载更多 -->
+            <div class="pages"><div>  {dede:pagelist listitem="index,end,pre,next,pageno" listsize="1"/}</div></div>
+            <!-- 作品解析End -->
+            
+                   {dede:include filename="footer_m.htm"/}
+    	
+    	    	
+	<script src="/wapimg/component.js"></script>
+    <script src="/wapimg/swiper.jquery.min.js"></script>
+ <script>
+		(function(){
+			var mySwiper1 = new Swiper('#tabNav',{
+				freeMode : true,
+				slidesPerView : 'auto',
+			});
+			tabFun($('.swiper-wrapper'), $('.g-tab-wrap'), 'click');
+			// 切换后滚动条回到顶部
+			$('.swiper-wrapper').click(function() {
+				$('html,body').scrollTop(0);
+			});
+		})();
+    	(function() {
+			// 全国分公司
+			$('.u-accordion-tit').each(function(index) {
+				var iSwithch = true;
+                $(this).click(function() {
+					iSwithch = $(this).hasClass('active');
+					if ( iSwithch ) {
+						$(this).removeClass('active').next('.m-station-group').slideUp();
+					} else {
+						$('.m-station-group').slideUp();
+						$('.u-accordion-tit').removeClass('active');
+						$(this).addClass('active').next('.m-station-group').slideDown();
+					}
+				});
+            });
+		})();
+    </script>
+    
+</body></html>
