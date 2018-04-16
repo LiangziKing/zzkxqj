@@ -1,3 +1,0 @@
-INSERT INTO `dede_search_keywords` VALUES('1','郑州保洁公司','郑州保洁公司 保洁公司 郑州','104','2','1523690723','0','0');
-INSERT INTO `dede_search_keywords` VALUES('2','郑州保洁','郑州保洁 保洁 郑州','2','2','1523690679','0','0');
-INSERT INTO `dede_search_keywords` VALUES('3','郑州开荒保洁','郑州开荒保洁 保洁 开荒 郑州','6','0','1523694331','0','0');

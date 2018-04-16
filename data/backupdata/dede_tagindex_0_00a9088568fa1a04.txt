@@ -1,0 +1,3 @@
+INSERT INTO `dede_tagindex` VALUES('1','/zhuangshish','37','0','1','0','0','1523689541','1523689541','1523689541');
+INSERT INTO `dede_tagindex` VALUES('2','/zhuangshish','37','0','1','0','0','1523689560','1523689560','1523689560');
+INSERT INTO `dede_tagindex` VALUES('3','1','30','0','2','0','0','1523863362','1523863362','1523863482');

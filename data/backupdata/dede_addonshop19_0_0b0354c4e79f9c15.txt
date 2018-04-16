@@ -1,6 +1,0 @@
-INSERT INTO `dede_addonshop19` VALUES('5','37','/zhuangshish','','127.0.0.1');
-INSERT INTO `dede_addonshop19` VALUES('6','37','/zhuangshish','','127.0.0.1');
-INSERT INTO `dede_addonshop19` VALUES('7','37','/zhuangshisheji/','','127.0.0.1');
-INSERT INTO `dede_addonshop19` VALUES('8','38','','','127.0.0.1');
-INSERT INTO `dede_addonshop19` VALUES('9','38','','','127.0.0.1');
-INSERT INTO `dede_addonshop19` VALUES('10','38','','','127.0.0.1');

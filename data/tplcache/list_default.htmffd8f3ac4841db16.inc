@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("field","",201,230);
+$z[0][4]=array();
+$z[0][4]['name']="typename";
+$z[1]=Array("global","",231,257);
+$z[1][4]=array();
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",301,352);
+$z[2][4]=array();
+$z[2][4]['name']="description";
+$z[2][4]['function']="html2text(@me)";
+$z[3]=Array("field","",391,413);
+$z[3][4]=array();
+$z[3][4]['name']="keywords";
+$z[4]=Array("include","",1368,1403);
+$z[4][4]=array();
+$z[4][4]['filename']="head.htm";
+$z[5]=Array("field","",1517,1546);
+$z[5][4]=array();
+$z[5][4]['name']="position";
+$z[6]=Array("channel","\r\n			\r\n				<li><a href='[field:typeurl/]'>[field:typename/]</a></li>\r\n				",1739,1943);
+$z[6][4]=array();
+$z[6][4]['type']="son";
+$z[6][4]['row']="10";
+$z[6][4]['currentstyle']="<li class='active'><a href='~typelink~' ~rel~>~typename~</a></li>";
+$z[7]=Array("list","\r\n													\r\n														<li class=\"clearfix\">\r\n								<a href=\"[field:arcurl/]\" class=\"pic pull-left\"><img src=\"[field:litpic/]\"></a>\r\n								<h3><a href=\"[field:arcurl/]\">[field:title/]</a></h3>\r\n								<h4><b>更新时间</b>：[field:pubdate function=\"GetDateMK(@me)\"/]  <b>浏览人数</b>：[field:click/]</h4>\r\n								<p>[field:description function='cn_substr(@me,185)'/]...</p>\r\n								<a href=\"[field:arcurl/]\" class=\"btn pull-right\"></a>\r\n							</li>\r\n									",2225,2758);
+$z[7][4]=array();
+$z[7][4]['pagesize']="5";
+$z[7][4]['titlelen']="60";
+$z[8]=Array("pagelist","",2856,2927);
+$z[8][4]=array();
+$z[8][4]['listitem']="info,index,end,pre,next,pageno";
+$z[8][4]['listsize']="5";
+$z[9]=Array("include","",3185,3221);
+$z[9][4]=array();
+$z[9][4]['filename']="right.htm";
+$z[10]=Array("include","",3338,3375);
+$z[10][4]=array();
+$z[10][4]['filename']="footer.htm";
+
+?>

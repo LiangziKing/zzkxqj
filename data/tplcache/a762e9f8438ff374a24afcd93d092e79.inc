@@ -1,0 +1,1 @@
+<li><img src="[field:imgsrc/]"  onload="DrawImage(this,895,500)"/></li>
