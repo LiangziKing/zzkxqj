@@ -58,7 +58,7 @@ function changeAuthCode() {
 				<header>
 					<h3>{dede:field.title/}</h3>
 					<div class="desc">
-						<span>保洁风格：<em>{dede:field.fengge/}</em>   &nbsp; &nbsp; 房屋面积：{dede:field.mianji/}   &nbsp;&nbsp;  行业：{dede:field.industry/}</span>
+						<span>保洁风格：<em>{dede:field.fengge/}</em>   &nbsp; &nbsp; 房屋面积：{dede:field.renshu/}   &nbsp;&nbsp;  行业：{dede:field.industry/}</span>
 					</div>
 				</header>
 				<div class="case-photo">
@@ -173,7 +173,7 @@ function changeAuthCode() {
 			<div class="case-list">
 				<ul class="list clearfix">
 											
-											{dede:arclist  orderby='id' typeid='' row=6 infolen='140' titlelen='40' addfields='sheji,sjstx,fengge,mianji,industry' channelid='2'}
+											{dede:arclist  orderby='id' typeid='' row=6 infolen='140' titlelen='40' addfields='sheji,sjstx,fengge,renshu,industry' channelid='2'}
 											
 											<li>
 							<a href="[field:arcurl/]">
@@ -185,7 +185,7 @@ function changeAuthCode() {
 									<h3>[field:title/]</h3>
 									<dl class="clearfix">
 										<dd>[field:fengge/]</dd>
-										<dd>[field:mianji/]</dd>
+										<dd>[field:renshu/]</dd>
 										<dd>[field:industry/]</dd>
 									</dl>
 								</div>

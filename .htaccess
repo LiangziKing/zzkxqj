@@ -1,0 +1,8 @@
+DirectoryIndex index.html index.php index.htm
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#首页伪静态规则，如果不使用动态首页，请勿必删除这一行，否则打开首页会出现死循环
+#RewriteRule ^(.*)/index\.html $1/index\.php [I]
+</IfModule>

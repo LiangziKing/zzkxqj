@@ -38,7 +38,7 @@ CREATE TABLE `dede_addonarticle18` (
   `userip` char(15) NOT NULL DEFAULT '',
   `body` mediumtext,
   `fengge` varchar(250) NOT NULL DEFAULT '',
-  `mianji` varchar(250) NOT NULL DEFAULT '',
+  `renshu` varchar(250) NOT NULL DEFAULT '',
   `huxing` varchar(250) NOT NULL DEFAULT '',
   `yezhu` varchar(250) NOT NULL DEFAULT '',
   `jingcheng` varchar(250) NOT NULL DEFAULT '',

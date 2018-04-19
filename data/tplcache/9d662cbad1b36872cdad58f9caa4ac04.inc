@@ -8,7 +8,7 @@
 
 <field:fengge itemname="风格" autofield="1" notsend="0" type="select" isnull="true" islist="1" default="欧式,中式,新古典,东南亚,美式,田园,地中海,现代,混搭"  maxlength="250" page="split">
 </field:fengge>
-<field:mianji itemname="面积" autofield="1" notsend="0" type="select" isnull="true" islist="1" default="30-60㎡,60-90㎡,90-120㎡,120-140㎡,140-200㎡,200㎡以上"  maxlength="250" page="split">
-</field:mianji>
+<field:renshu itemname="面积" autofield="1" notsend="0" type="select" isnull="true" islist="1" default="30-60㎡,60-90㎡,90-120㎡,120-140㎡,140-200㎡,200㎡以上"  maxlength="250" page="split">
+</field:renshu>
 <field:sjstx itemname="设计师头像" autofield="1" notsend="0" type="imgfile" isnull="true" islist="1" default=""  maxlength="250" page="">
 </field:sjstx>

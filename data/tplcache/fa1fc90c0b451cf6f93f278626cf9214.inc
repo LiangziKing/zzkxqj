@@ -8,7 +8,7 @@
 									<h3>[field:title/]</h3>
 									<dl class="clearfix">
 										<dd>[field:fengge/]</dd>
-										<dd>[field:mianji/]</dd>
+										<dd>[field:renshu/]</dd>
 										<dd>[field:industry/]</dd>
 									</dl>
 								</div>
