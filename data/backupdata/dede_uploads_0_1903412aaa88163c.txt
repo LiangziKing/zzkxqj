@@ -21,3 +21,7 @@ INSERT INTO `dede_uploads` VALUES('20','0','1-1P416151602-50.png','/uploads/alli
 INSERT INTO `dede_uploads` VALUES('21','0','1-1P416151U8.png','/uploads/allimg/1804/1-1P416151U8.png','0','0','0','0','458649','1523863138','1');
 INSERT INTO `dede_uploads` VALUES('22','19','1','/uploads/allimg/1804/1-1P416152239.png','0','0','0','0','375883','1523863359','1');
 INSERT INTO `dede_uploads` VALUES('23','20','1','/uploads/allimg/1804/1-1P416152438.png','0','0','0','0','458649','1523863478','1');
+INSERT INTO `dede_uploads` VALUES('24','0','1-1P4191G621.jpg','/uploads/allimg/1804/1-1P4191G621.jpg','0','0','0','0','70898','1524129381','1');
+INSERT INTO `dede_uploads` VALUES('25','0','1-1P4191G622.jpg','/uploads/allimg/1804/1-1P4191G622.jpg','0','0','0','0','39055','1524129382','1');
+INSERT INTO `dede_uploads` VALUES('26','0','1-1P4191G622-50.jpg','/uploads/allimg/1804/1-1P4191G622-50.jpg','0','0','0','0','63858','1524129382','1');
+INSERT INTO `dede_uploads` VALUES('27','0','1-1P4191G622-51.jpg','/uploads/allimg/1804/1-1P4191G622-51.jpg','0','0','0','0','54807','1524129382','1');

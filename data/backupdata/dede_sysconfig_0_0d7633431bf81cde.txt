@@ -100,7 +100,7 @@ INSERT INTO `dede_sysconfig` VALUES('226','cfg_smtp_password','SMTP服务器的�
 INSERT INTO `dede_sysconfig` VALUES('96','cfg_updateperi','百度新闻xml更新时间 （单位：分钟）','8','string','15');
 INSERT INTO `dede_sysconfig` VALUES('227','cfg_online_type','在线支付网关类型','2','string','nps');
 INSERT INTO `dede_sysconfig` VALUES('706','cfg_upload_switch','删除文章文件同时删除相关附件文件','2','bool','Y');
-INSERT INTO `dede_sysconfig` VALUES('708','cfg_rewrite','是否使用伪静态','2','bool','N');
+INSERT INTO `dede_sysconfig` VALUES('708','cfg_rewrite','是否使用伪静态','2','bool','Y');
 INSERT INTO `dede_sysconfig` VALUES('707','cfg_allsearch_limit','网站全局搜索时间限制','2','string','1');
 INSERT INTO `dede_sysconfig` VALUES('709','cfg_delete','文章回收站(是/否)开启','2','bool','Y');
 INSERT INTO `dede_sysconfig` VALUES('710','cfg_keywords','站点默认关键字','1','string','');
@@ -148,7 +148,7 @@ INSERT INTO `dede_sysconfig` VALUES('14','cfg_domain_cookie','跨域共享cookie
 INSERT INTO `dede_sysconfig` VALUES('756','cfg_memcache_enable','是否启用memcache缓存，如果为否(N)，默认使用文件缓存','6','bool','N');
 INSERT INTO `dede_sysconfig` VALUES('757','cfg_memcache_mc_defa','默认memcache缓存服务器地址','6','string','memcache://127.0.0.1:11211/default127');
 INSERT INTO `dede_sysconfig` VALUES('758','cfg_memcache_mc_oth','附加memcache缓存服务器地址','6','string','');
-INSERT INTO `dede_sysconfig` VALUES('759','cfg_cross_sectypeid','支持交叉栏目显示副栏目内容','7','bool','N');
+INSERT INTO `dede_sysconfig` VALUES('759','cfg_cross_sectypeid','支持交叉栏目显示副栏目内容','7','bool','Y');
 INSERT INTO `dede_sysconfig` VALUES('760','cfg_digg_update','顶踩缓存异步更新间隔（0为不缓存）','6','number','0');
 INSERT INTO `dede_sysconfig` VALUES('761','cfg_feedback_guest','是否允许匿名评论','5','bool','N');
 INSERT INTO `dede_sysconfig` VALUES('0','cfg_disable_funs','模板引擎禁用PHP函数','7','bstring','phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents');
