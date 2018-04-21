@@ -1,5 +1,0 @@
-INSERT INTO `dede_taglist` VALUES('1','5','0','37','/zhuangshish');
-INSERT INTO `dede_taglist` VALUES('2','6','0','37','/zhuangshish');
-INSERT INTO `dede_taglist` VALUES('3','19','0','30','1');
-INSERT INTO `dede_taglist` VALUES('3','20','0','30','1');
-INSERT INTO `dede_taglist` VALUES('4','35','0','30','河南职工医院');

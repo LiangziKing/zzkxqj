@@ -66,7 +66,7 @@ CREATE TABLE `dede_addonimages` (
   `industry` enum('机关单位','医院','学校','商场','银行','4S店','写字楼','企事业单位','其他') DEFAULT NULL,
   `jingli` varchar(250) NOT NULL DEFAULT '王效禹',
   `leixing` enum('日常保洁','秩序和保安','外墙清洗','开荒保洁','其他') DEFAULT NULL,
-  `renshu` enum('1-5人','5-10人','10-20人','20-30人','40-50人50人以上') DEFAULT NULL,
+  `renshu` enum('1-5人','5-10人','10-20人','20-30人','40-50人','50人以上') DEFAULT NULL,
   `jltx` varchar(250) NOT NULL DEFAULT '/uploads/allimg/170807/1-1FPG412270-L.jpg',
   PRIMARY KEY (`aid`),
   KEY `imagesMain` (`typeid`)

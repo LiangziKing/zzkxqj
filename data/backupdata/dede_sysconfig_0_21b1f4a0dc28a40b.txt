@@ -7,7 +7,7 @@ INSERT INTO `dede_sysconfig` VALUES('6','cfg_indexname','主页链接名','1','s
 INSERT INTO `dede_sysconfig` VALUES('7','cfg_webname','网站名称','1','string','郑州保洁公司【开祥清洁】河南清洗保洁行业标准的倡导者');
 INSERT INTO `dede_sysconfig` VALUES('8','cfg_adminemail','网站发信EMAIL','2','string','admin@dedecms.com');
 INSERT INTO `dede_sysconfig` VALUES('9','cfg_html_editor','Html编辑器（ckeditor,需要fck的用户可以去官网下载）','2','string','ckeditor');
-INSERT INTO `dede_sysconfig` VALUES('10','cfg_arcdir','文档HTML默认保存路径','1','string','/a');
+INSERT INTO `dede_sysconfig` VALUES('10','cfg_arcdir','文档HTML默认保存路径','1','string','/');
 INSERT INTO `dede_sysconfig` VALUES('11','cfg_medias_dir','图片/上传文件默认路径','1','string','/uploads');
 INSERT INTO `dede_sysconfig` VALUES('12','cfg_ddimg_width','缩略图默认宽度','3','number','320');
 INSERT INTO `dede_sysconfig` VALUES('13','cfg_ddimg_height','缩略图默认高度','3','number','165');
@@ -152,7 +152,7 @@ INSERT INTO `dede_sysconfig` VALUES('759','cfg_cross_sectypeid','支持交叉栏
 INSERT INTO `dede_sysconfig` VALUES('760','cfg_digg_update','顶踩缓存异步更新间隔（0为不缓存）','6','number','0');
 INSERT INTO `dede_sysconfig` VALUES('761','cfg_feedback_guest','是否允许匿名评论','5','bool','N');
 INSERT INTO `dede_sysconfig` VALUES('0','cfg_disable_funs','模板引擎禁用PHP函数','7','bstring','phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents');
-INSERT INTO `dede_sysconfig` VALUES('0','cfg_disable_tags','模板引擎禁用标签','7','bstring','php');
+INSERT INTO `dede_sysconfig` VALUES('0','cfg_disable_tags','模板引擎禁用标签','7','bstring','');
 INSERT INTO `dede_sysconfig` VALUES('762','cfg_yuyue','顶部预约设计、客服、微博','1','bstring','');
 INSERT INTO `dede_sysconfig` VALUES('763','cfg_wappowerby','手机版 - 版权信息','1','bstring','');
 INSERT INTO `dede_sysconfig` VALUES('764','cfg_tel','手机版电话','1','string','371-6639 8288');
