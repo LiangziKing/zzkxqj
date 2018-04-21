@@ -58,7 +58,7 @@ function changeAuthCode() {
 				<header>
 					<h3>{dede:field.title/}</h3>
 					<div class="desc">
-						<span>保洁风格：<em>{dede:field.fengge/}</em>   &nbsp; &nbsp; 房屋面积：{dede:field.renshu/}   &nbsp;&nbsp;  行业：{dede:field.industry/}</span>
+						<span>服务类型：<em>{dede:field.leixing/}</em>   &nbsp; &nbsp; 服务人数：{dede:field.renshu/}   &nbsp;&nbsp;  行业：{dede:field.industry/}</span>
 					</div>
 				</header>
 				<div class="case-photo">
@@ -116,15 +116,15 @@ function changeAuthCode() {
 			<div class="detailbar pull-right">
 				
 				<div class="designer bar-box">
-					<header>本案设计师</header>
+					<header>本案负责人</header>
 					<div class="desc">
 						<div class="hd clearfix">
 							<div style="height: 113px;overflow: hidden;float: left;">
-							<img src="{dede:field.sjstx/}" class="pull-left">
+							<img src="{dede:field.jltx/}" class="pull-left">
 							</div>
 							
 							<h3>{dede:field.sheji/}</h3>
-							<p><a href="{dede:type typeid='76'}[field:typeurl/]{/dede:type}">更多设计师</a></p>
+							<p><a href="{dede:type typeid='76'}[field:typeurl/]{/dede:type}">更多负责人</a></p>
 						</div>
 					
 					</div>
@@ -173,18 +173,18 @@ function changeAuthCode() {
 			<div class="case-list">
 				<ul class="list clearfix">
 											
-											{dede:arclist  orderby='id' typeid='' row=6 infolen='140' titlelen='40' addfields='sheji,sjstx,fengge,renshu,industry' channelid='2'}
+											{dede:arclist  orderby='id' typeid='' row=6 infolen='140' titlelen='40' addfields='sheji,jltx,leixing,renshu,industry' channelid='2'}
 											
 											<li>
 							<a href="[field:arcurl/]">
 								<div class="pic"><img src="[field:litpic/]"></div>
 								<div class="desc clearfix">
 									<div class="hd pull-right">
-										<img src="[field:sjstx/]" class="pull-left">
+										<img src="[field:jltx/]" class="pull-left">
 										[field:sheji/]									</div>
 									<h3>[field:title/]</h3>
 									<dl class="clearfix">
-										<dd>[field:fengge/]</dd>
+										<dd>[field:leixing/]</dd>
 										<dd>[field:renshu/]</dd>
 										<dd>[field:industry/]</dd>
 									</dl>

@@ -11,5 +11,5 @@
 <field:addr itemname="您的位置" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:addr>
 
-<field:area itemname="建筑面积" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+<field:area itemname="建筑人数" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:area>

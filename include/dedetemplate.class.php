@@ -300,7 +300,7 @@ class DedeTemplate
     }
 
     /**
-     *  设置标记风格
+     *  设置标记类型
      *
      * @access    public
      * @param     string   $ts  标签开始标记

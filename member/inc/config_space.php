@@ -53,7 +53,7 @@ if($_vars['matt'] == 10 && $cfg_mb_adminlock=='Y'
 }
 
 //---------------------------
-//默认风格
+//默认类型
 if($_vars['spacestyle']=='')
 {
     if($_vars['mtype']=='个人') {

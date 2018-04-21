@@ -9,7 +9,7 @@ $z[3]=Array("title","",198,212);
 $z[3][4]=array();
 $z[4]=Array("yezhu","",215,229);
 $z[4][4]=array();
-$z[5]=Array("fengge","",232,247);
+$z[5]=Array("leixing","",232,247);
 $z[5][4]=array();
 
 ?>

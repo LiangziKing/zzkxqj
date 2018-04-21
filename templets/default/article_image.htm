@@ -175,7 +175,7 @@ function getDigg(aid)
 			</div><!-- /info -->
 			<div class="picbox">
 
-             {dede:field name='pagestyle' alt='根据不同的页面风格输出不同的头信息' runphp='yes'}
+             {dede:field name='pagestyle' alt='根据不同的页面类型输出不同的头信息' runphp='yes'}
                 if(@me==3) {
                 	@me = '<ul class="e8">';
                 }
@@ -205,7 +205,7 @@ function getDigg(aid)
                 [field:pagestyle runphp='yes'] @me = (@me==3 ? '</li>' : ''); [/field:pagestyle]
              {/dede:field}
 
-             {dede:field name='pagestyle' alt='根据不同的风格输出不同的结尾信息' runphp='yes'}
+             {dede:field name='pagestyle' alt='根据不同的类型输出不同的结尾信息' runphp='yes'}
                 if(@me==3) {
                 @me = '</ul>';
                 }

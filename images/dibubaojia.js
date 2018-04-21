@@ -37,7 +37,7 @@ $(function () {
 					
 					  "<input type='text' placeholder='请输入您的楼盘' class='mobile' name='addr'>" +
 					  
-					    "<input type='text' placeholder='请输入您的房屋面积' class='mobile' name='area'>" +
+					    "<input type='text' placeholder='请输入您的服务人数' class='mobile' name='area'>" +
 					 "</div></div>" +
 					
 					 "<input type='hidden' value='底部报价' class='mobile' name='shejishi'>" +

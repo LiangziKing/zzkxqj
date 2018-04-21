@@ -11,16 +11,16 @@
 <field:addr itemname="您的位置" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:addr>
 
-<field:area itemname="建筑面积" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+<field:area itemname="建筑人数" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:area>
 
 <field:cost itemname="保洁预算" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:cost>
 
-<field:unit itemname="您的户型" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+<field:unit itemname="您的行业" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:unit>
 
-<field:dstyle itemname="保洁风格" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
+<field:dstyle itemname="服务类型" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">
 </field:dstyle>
 
 <field:shejishi itemname="预约项目经理" autofield="1" type="text" isnull="true" default=""  maxlength="250" page="">

@@ -50,7 +50,7 @@ function checkuse($type)
     }
     else
     {
-        return '<a href="spaceskin.php?t='.$type.'&dopost=use" title="使用此风格">使用</a>';
+        return '<a href="spaceskin.php?t='.$type.'&dopost=use" title="使用此类型">使用</a>';
     }
 }
 
@@ -77,7 +77,7 @@ function showdemopic($dir, $dirname)
 }
 
 /**
- *  列出风格目录
+ *  列出类型目录
  *
  * @access    public
  * @param     string
@@ -148,8 +148,8 @@ function ListSkin()
         if($num==0) { print '<tr height="20">'; }
         $num++;
         print '<td class="b"><img src="'.$value['demo'].'" width="150" height="150" border="0" /><br />';
-        print '风格名称：'.$value['name']."({$value['sign']})".'<br />';
-        print '风格作者：'.$value['author'].'<br />';
+        print '类型名称：'.$value['name']."({$value['sign']})".'<br />';
+        print '类型作者：'.$value['author'].'<br />';
         //print '建立时间：'.$value['date'].'<br />';
         print '操作：'.checkuse($value['sign']).'';
         if($num==4)

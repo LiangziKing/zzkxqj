@@ -1,7 +1,7 @@
 <?php
 $z[0]=Array("pagestyle","",0,105);
 $z[0][4]=array();
-$z[0][4]['itemname']="页面风格";
+$z[0][4]['itemname']="页面类型";
 $z[0][4]['type']="number";
 $z[0][4]['isnull']="true";
 $z[0][4]['default']="2";

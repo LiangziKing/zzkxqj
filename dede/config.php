@@ -14,7 +14,7 @@ require_once(DEDEINC.'/userlogin.class.php');
 header('Cache-Control:private');
 $dsql->safeCheck = FALSE;
 $dsql->SetLongLink();
-$cfg_admin_skin = 1; // 后台管理风格
+$cfg_admin_skin = 1; // 后台管理类型
 
 if(file_exists(DEDEDATA.'/admin/skin.txt'))
 {

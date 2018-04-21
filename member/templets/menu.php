@@ -132,7 +132,7 @@
         	<li class="icon mtypes"><a href="../member/mtypes.php"><b></b>分类管理</a></li>
         	<li class="icon flink"><a href="../member/flink_main.php"><b></b>书签管理</a></li>
         	<li class="icon info"><a href="../member/edit_space_info.php"><b></b>空间设置</a></li>
-        	<li class="icon spaceskin"><a href="../member/spaceskin.php"><b></b>风格选择</a></li>
+        	<li class="icon spaceskin"><a href="../member/spaceskin.php"><b></b>类型选择</a></li>
         </ul>
         
         <?php

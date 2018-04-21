@@ -1,6 +1,6 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
-$cfg_disable_tags = 'php';
+$cfg_disable_tags = '';
 $cfg_basehost = 'http://www.zzkxqj.com';
 $cfg_cmspath = '';
 $cfg_cookie_encode = 'CWAqFreg9WUYUERYW68QMoyAxaLgOKW';
@@ -10,7 +10,7 @@ $cfg_indexname = '首页';
 $cfg_webname = '郑州保洁公司【开祥清洁】河南清洗保洁行业标准的倡导者';
 $cfg_adminemail = 'admin@dedecms.com';
 $cfg_html_editor = 'ckeditor';
-$cfg_arcdir = '/a';
+$cfg_arcdir = '/';
 $cfg_medias_dir = '/uploads';
 $cfg_ddimg_width = 320;
 $cfg_ddimg_height = 165;
